@@ -1,0 +1,65 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+     {{ title }}
+  </h1>
+</div>
+<div class=outerborder style="text-align: center">
+  <h1>Movies</h1><br>
+  Search &nbsp;&nbsp;<input type="text" name="fname" [(ngModel)]="in" (keyup)="search()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <button (click)="search()">Go</button>
+  <br>
+  <br>
+
+  <table align=center>
+    <tr>
+      
+      <th>Title</th>
+      <th>Rating</th>
+      <th>Image</th>
+    </tr>
+    
+      <tr *ngFor="let item of array;let i=index">
+          
+          <td>{{item.title}}</td>
+          <td>{{array[i].rating}}</td>
+          <td><img src="https://picsum.photos/80/80" alt="Image Not Found"></td>
+    
+    </tr>
+  
+  </table>
+  </div>
+
+  <!---<div>
+      Movies
+      <div>
+       <form>
+          <div >
+            search  <input name="first" type="text" [(ngModel)]="s" (keyup)="searchFunction()" > 
+            <!-- <button (click)="searchFunction()" >search</button>  button can also be used bu it outdated -
+          </div>
+       </form>
+      </div> <br>
+      <div>
+        <table>
+          <thead>
+            <th>S No</th>
+            <th>Title</th>
+            <th>Rating</th>
+            <th>Image</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of contentArray;let i = index">
+              <td>{{i+1}}</td>
+              <td>{{item.title}}</td>
+              <td>{{contentArray[i].rating}}</td>
+              <!-- <td><img src="{{item.cover_url}}" alt="Image Not Found"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <router-outlet></router-outlet>-->
+
+<router-outlet></router-outlet>
+
